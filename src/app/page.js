@@ -82,8 +82,8 @@ export default function Home() {
             <motion.div className={styles.timelineItem} variants={itemVariants}>
               <div className={styles.timelineDate}>2024 - 2025</div>
               <div className={styles.timelineContent}>
-                <h3>Front-end Developer</h3>
-                <p>Freelance</p>
+                <h3>Computer science</h3>
+                <p>To complete</p>
               </div>
             </motion.div>
           </motion.div>
