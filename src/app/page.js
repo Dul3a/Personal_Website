@@ -1,95 +1,178 @@
-import Image from "next/image";
+'use client';
+
 import styles from "./page.module.css";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <motion.nav 
+        className={styles.navbar}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <div className={styles.logo}>Dulea Andrei</div>
+        <div className={styles.navLinks}>
+          <button onClick={() => scrollToSection('achievements')} className={styles.navButton}>Achievements</button>
+          <button onClick={() => scrollToSection('projects')} className={styles.navButton}>Projects</button>
+          <button onClick={() => scrollToSection('contact')} className={styles.navButton}>Contact</button>
         </div>
+      </motion.nav>
+
+      <main className={styles.main}>
+        <motion.div 
+          className={styles.hero}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.h1 variants={itemVariants}>Dulea Andrei</motion.h1>
+          <motion.p className={styles.subtitle} variants={itemVariants}>
+            A high school student with a passion for learning and a love for technology.
+          </motion.p>
+        </motion.div>
+
+        <motion.section 
+          id="achievements"
+          className={styles.experience}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.h2 variants={itemVariants}>Achievements</motion.h2>
+          <motion.div className={styles.timeline} variants={containerVariants}>
+            <motion.div className={styles.timelineItem} variants={itemVariants}>
+              <div className={styles.timelineDate}>2025 - Present</div>
+              <div className={styles.timelineContent}>
+                <h3>Science</h3>
+                <p>First place at the PerformSTEM Competition</p> <br></br>
+                <h3>Computer science</h3>
+                <p>First place at the county phase of the InfoEducatie Olympiad, qualified to the national phase</p> <br></br>
+                <h3>Computer science</h3>
+                <p>🥇 Gold medal at the National Olympiad of Artificial Intelligence (ONIA)</p>
+              </div>
+            </motion.div>
+            <motion.div className={styles.timelineItem} variants={itemVariants}>
+              <div className={styles.timelineDate}>2024 - 2025</div>
+              <div className={styles.timelineContent}>
+                <h3>Front-end Developer</h3>
+                <p>Freelance</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        </motion.section>
+
+        <motion.section 
+          id="projects"
+          className={styles.projects}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.h2 variants={itemVariants}>Projects</motion.h2>
+          <motion.div className={styles.projectGrid} variants={containerVariants}>
+            <motion.div 
+              className={styles.projectCard}
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <h3>Project One</h3>
+              <p>Advanced components and templates to craft beautiful websites.</p>
+            </motion.div>
+            <motion.div 
+              className={styles.projectCard}
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <h3>Project Two</h3>
+              <p>UI kit to make beautiful, animated interfaces.</p>
+            </motion.div>
+          </motion.div>
+        </motion.section>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+
+      <motion.footer 
+        id="contact" 
+        className={styles.footer}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div className={styles.contactInfo} variants={itemVariants}>
+          <h2>Contact</h2>
+          <p>Feel free to contact me at your@email.com</p>
+          <motion.div 
+            className={styles.socialLinks}
+            variants={containerVariants}
+          >
+            <motion.a 
+              href="https://github.com/yourusername" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              GitHub
+            </motion.a>
+            <motion.a 
+              href="https://twitter.com/yourusername" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Twitter
+            </motion.a>
+            <motion.a 
+              href="https://linkedin.com/in/yourusername" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              LinkedIn
+            </motion.a>
+          </motion.div>
+        </motion.div>
+        <motion.div 
+          className={styles.copyright}
+          variants={itemVariants}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          © {new Date().getFullYear()} Dulea Andrei. All rights reserved.
+        </motion.div>
+      </motion.footer>
     </div>
   );
 }
