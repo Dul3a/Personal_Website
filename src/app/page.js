@@ -2,10 +2,14 @@
 
 import styles from "./page.module.css";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
   };
 
   const containerVariants = {
@@ -39,7 +43,15 @@ export default function Home() {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className={styles.logo}>Dulea Andrei</div>
-        <div className={styles.navLinks}>
+        <button 
+          className={`${styles.menuButton} ${isMenuOpen ? styles.active : ''}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
           <button onClick={() => scrollToSection('achievements')} className={styles.navButton}>Achievements</button>
           <button onClick={() => scrollToSection('projects')} className={styles.navButton}>Projects</button>
           <button onClick={() => scrollToSection('contact')} className={styles.navButton}>Contact</button>
@@ -129,7 +141,7 @@ export default function Home() {
       >
         <motion.div className={styles.contactInfo} variants={itemVariants}>
           <h2>Contact</h2>
-          <p>Feel free to contact me at your@email.com</p>
+          <p>Feel free to contact me at <b>duleaandrei3@gmail.com</b></p>
           <motion.div 
             className={styles.socialLinks}
             variants={containerVariants}
