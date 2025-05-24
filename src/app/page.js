@@ -147,7 +147,7 @@ export default function Home() {
             variants={containerVariants}
           >
             <motion.a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/Dul3a" 
               target="_blank" 
               rel="noopener noreferrer"
               variants={itemVariants}
@@ -157,17 +157,17 @@ export default function Home() {
               GitHub
             </motion.a>
             <motion.a 
-              href="https://twitter.com/yourusername" 
+              href="https://www.instagram.com/dulea.exe/" 
               target="_blank" 
               rel="noopener noreferrer"
               variants={itemVariants}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              Twitter
+              Instagram
             </motion.a>
             <motion.a 
-              href="https://linkedin.com/in/yourusername" 
+              href="https://www.linkedin.com/in/andrei-dulea-004671367/" 
               target="_blank" 
               rel="noopener noreferrer"
               variants={itemVariants}
