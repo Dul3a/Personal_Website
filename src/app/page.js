@@ -81,7 +81,7 @@ export default function Home() {
           <motion.h2 variants={itemVariants}>Achievements</motion.h2>
           <motion.div className={styles.timeline} variants={containerVariants}>
             <motion.div className={styles.timelineItem} variants={itemVariants}>
-              <div className={styles.timelineDate}>2025 - Present</div>
+              <div className={styles.timelineDate}>Present - 2025</div>
               <div className={styles.timelineContent}>
                 <h3>Science</h3>
                 <p>First place at the PerformSTEM Competition</p> <br></br>
@@ -92,7 +92,7 @@ export default function Home() {
               </div>
             </motion.div>
             <motion.div className={styles.timelineItem} variants={itemVariants}>
-              <div className={styles.timelineDate}>2024 - 2025</div>
+              <div className={styles.timelineDate}>2025 - 2024</div>
               <div className={styles.timelineContent}>
                 <h3>Computer science</h3>
                 <p>To complete</p>

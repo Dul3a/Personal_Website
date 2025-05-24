@@ -23,7 +23,7 @@
 }
 
 .logo {
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   font-weight: 600;
   color: #111111;
   z-index: 1001;
@@ -39,7 +39,7 @@
   border: none;
   background: none;
   color: #111111;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: opacity 0.2s ease;
   text-decoration: none;
@@ -94,14 +94,14 @@
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 5.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.1;
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 2.25rem;
   color: #666666;
   max-width: 600px;
 }
@@ -111,7 +111,7 @@
 }
 
 .projects h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -133,8 +133,12 @@
 }
 
 .projectCard h3 {
-  font-size: 1.5rem;
+  font-size: 2.25rem;
   margin-bottom: 1rem;
+}
+
+.projectCard p {
+  font-size: 1.5rem;
 }
 
 .experience {
@@ -142,7 +146,7 @@
 }
 
 .experience h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -160,12 +164,16 @@
 
 .timelineDate {
   color: #666666;
-  font-size: 0.9rem;
+  font-size: 1.35rem;
 }
 
 .timelineContent h3 {
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   margin-bottom: 0.5rem;
+}
+
+.timelineContent p {
+  font-size: 1.5rem;
 }
 
 .footer {
@@ -181,8 +189,12 @@
 }
 
 .contactInfo h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
+}
+
+.contactInfo p {
+  font-size: 1.5rem;
 }
 
 .socialLinks {
@@ -196,6 +208,7 @@
   color: #111111;
   text-decoration: none;
   transition: opacity 0.2s ease;
+  font-size: 1.5rem;
 }
 
 .socialLinks a:hover {
@@ -205,7 +218,7 @@
 .copyright {
   text-align: center;
   color: #666666;
-  font-size: 0.9rem;
+  font-size: 1.35rem;
 }
 
 @media (max-width: 768px) {
@@ -245,15 +258,15 @@
   }
 
   .navButton {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3.75rem;
   }
   
   .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.875rem;
   }
   
   .timelineItem {
