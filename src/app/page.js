@@ -10,8 +10,8 @@ export default function Home() {
 
   const scrollToTop = () => {
     scroll.scrollToTop({
-      duration: 1000,
-      smooth: true,
+      duration: 1500,
+      smooth: "easeInOutExpo"
     });
     setIsMenuOpen(false);
   };
@@ -72,7 +72,7 @@ export default function Home() {
               to="achievements"
               spy={true}
               smooth="easeInOutCubic"
-              duration={1000}
+              duration={1200}
               offset={-100}
               className={styles.navButton}
               onClick={() => setIsMenuOpen(false)}
@@ -88,7 +88,7 @@ export default function Home() {
               to="projects"
               spy={true}
               smooth="easeInOutCubic"
-              duration={1000}
+              duration={1200}
               offset={-100}
               className={styles.navButton}
               onClick={() => setIsMenuOpen(false)}
@@ -103,8 +103,8 @@ export default function Home() {
             <Link
               to="contact"
               spy={true}
-              smooth="easeInOutCubic"
-              duration={1000}
+              smooth="easeInOutExpo"
+              duration={1700}
               offset={-100}
               className={styles.navButton}
               onClick={() => setIsMenuOpen(false)}
