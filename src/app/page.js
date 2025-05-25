@@ -259,7 +259,7 @@ export default function Home() {
       >
         <motion.div className={styles.contactInfo} variants={itemVariants}>
           <h2>Contact</h2>
-          <p>Feel free to contact me at <b>duleaandrei3@gmail.com</b></p>
+          <p>Feel free to contact me at <b>dulea.tech@gmail.com</b></p>
           <motion.div 
             className={styles.socialLinks}
             variants={containerVariants}
