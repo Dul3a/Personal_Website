@@ -52,7 +52,6 @@ export default function Home() {
           <span></span>
         </button>
         <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
-        <hr></hr>
           <button onClick={() => scrollToSection('achievements')} className={styles.navButton}>Achievements</button>
           <button onClick={() => scrollToSection('projects')} className={styles.navButton}>Projects</button>
           <button onClick={() => scrollToSection('contact')} className={styles.navButton}>Contact</button>
