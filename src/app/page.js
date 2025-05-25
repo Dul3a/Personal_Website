@@ -3,12 +3,16 @@
 import styles from "./page.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  const scrollToTop = () => {
+    scroll.scrollToTop({
+      duration: 1000,
+      smooth: true,
+    });
     setIsMenuOpen(false);
   };
 
@@ -42,7 +46,15 @@ export default function Home() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className={styles.logo}>Dulea Andrei</div>
+        <motion.div 
+          className={styles.logo}
+          onClick={scrollToTop}
+          style={{ cursor: 'pointer' }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Dulea Andrei
+        </motion.div>
         <button 
           className={`${styles.menuButton} ${isMenuOpen ? styles.active : ''}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -52,9 +64,54 @@ export default function Home() {
           <span></span>
         </button>
         <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
-          <button onClick={() => scrollToSection('achievements')} className={styles.navButton}>Achievements</button>
-          <button onClick={() => scrollToSection('projects')} className={styles.navButton}>Projects</button>
-          <button onClick={() => scrollToSection('contact')} className={styles.navButton}>Contact</button>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <Link
+              to="achievements"
+              spy={true}
+              smooth="easeInOutCubic"
+              duration={1000}
+              offset={-100}
+              className={styles.navButton}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Achievements
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <Link
+              to="projects"
+              spy={true}
+              smooth="easeInOutCubic"
+              duration={1000}
+              offset={-100}
+              className={styles.navButton}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Projects
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <Link
+              to="contact"
+              spy={true}
+              smooth="easeInOutCubic"
+              duration={1000}
+              offset={-100}
+              className={styles.navButton}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
+          </motion.div>
         </div>
       </motion.nav>
 
