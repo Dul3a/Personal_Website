@@ -81,21 +81,77 @@ export default function Home() {
           <motion.h2 variants={itemVariants}>Achievements</motion.h2>
           <motion.div className={styles.timeline} variants={containerVariants}>
             <motion.div className={styles.timelineItem} variants={itemVariants}>
-              <div className={styles.timelineDate}>Present - 2025</div>
+              <div className={styles.timelineDate}>Present - 2025 (11ᵗʰ grade)</div>
               <div className={styles.timelineContent}>
                 <h3>Science</h3>
-                <p>First place at the PerformSTEM Competition</p> <br></br>
+                <p>🥇 First place at the PerformSTEM Competition</p> <br></br>
+
                 <h3>Computer science</h3>
-                <p>First place at the county phase of the InfoEducatie Olympiad, qualified to the national phase</p> <br></br>
+                <p>🏆 First place at the county phase of the InfoEducatie Olympiad, qualified to the national phase</p> <br></br>
+
                 <h3>Computer science</h3>
-                <p>🥇 Gold medal at the National Olympiad of Artificial Intelligence (ONIA)</p>
+                <p>🥇 Gold medal at the National Olympiad of Artificial Intelligence (ONIA), qualified for the Romanian National Training Camp (extended team)</p> <br></br>
+
+                <h3>Interdisciplinary / Project-Based Learning</h3>
+                <p>📣 Participated at the national phase of the "Made for Europe" National Contest. Developed an educational website as a final product 
+                  of an Erasmus+ project, combining web development skills with intercultural and civic education.</p> <br></br>
+
+                <h3>Computer science</h3>
+                <p>🏆 First place at the the county phase of the National Olympiad of Artificial Intelligence (OJIA), qualified to the national phase</p> <br></br>
+
+                <h3>Computer science</h3>
+                <p>🏆 Second place at the county phase of the National Olympiad in Applied Informatics - AcadNet 2025</p> <br></br>
+                
+                <h3>Interdisciplinary / Project-Based Learning</h3>
+                <p>🏆 First place at the county phase of the "Made for Europe" National Contest, qualified to the national phase</p> <br></br>
+
+                <h3>Computer science</h3>
+                <p>📜 Honourable Mention at the Informatics Olympiad (OJI) - County Phase, 2025</p> <br></br>
+
+                <h3>Computer science</h3>
+                <p>🏆 Second place at the local phase of the National Olympiad in Applied Informatics - AcadNet 2025, qualified to the county phase</p> 
               </div>
-            </motion.div>
+            </motion.div><br></br>
+
             <motion.div className={styles.timelineItem} variants={itemVariants}>
-              <div className={styles.timelineDate}>2025 - 2024</div>
+              <div className={styles.timelineDate}>2025 - 2024 (10ᵗʰ grade)</div>
               <div className={styles.timelineContent}>
-                <h3>Computer science</h3>
-                <p>To complete</p>
+                <h3>Interdisciplinary / Project-Based Learning</h3>
+                <p>🥇 First place at the I GO VET Contest - filmed and edited a 3 minute video about the importance of European Values</p> <br></br>
+
+                <h3>Computer Science</h3>
+                <p>🥈 Second place at the Educational Web Pages Contest in Setúbal, Portugal, in an Erasmus+ VET Project</p> <br></br>
+
+                <h3>Computer Science</h3>
+                <p>📜 Honourable Mention at the Informatics Olympiad (OJI) - County Phase, 2024</p> <br></br>
+
+                <h3>Computer Science</h3>
+                <p>📣 Participated in the County Round of the Romanian ICT Olympiad (OTI) - C# section</p>
+              </div>
+            </motion.div><br></br>
+
+            <motion.div className={styles.timelineItem} variants={itemVariants}>
+              <div className={styles.timelineDate}>2024 - 2023 (9ᵗʰ grade)</div>
+              <div className={styles.timelineContent}>
+                <h3>Engineering</h3>
+                <p>📣 Participated at the centerstage season of the First Tech Challenge Contest in Romania</p> <br></br>
+
+                <h3>Computer Science</h3>
+                <p>📜 Honourable Mention at the Informatics Olympiad (OJI) - County Phase, 2023</p> <br></br>
+
+                <h3>Interdisciplinary / Project-Based Learning</h3>
+                <p>📣 Actively involved in the eTwinning project "Getting to know a mathematician from my country"</p>
+              </div>
+            </motion.div><br></br>
+
+            <motion.div className={styles.timelineItem} variants={itemVariants}>
+              <div className={styles.timelineDate}>2023 - 2022 (8ᵗʰ grade)</div>
+              <div className={styles.timelineContent}>
+                <h3>Interdisciplinary / Project-Based Learning</h3>
+                <p>🥈 Second place at the national phase of the "Made for Europe" National Contest</p> <br></br>
+
+                <h3>Mathematics</h3>
+                <p>📜 Honourable Mention awarded at the National Mathematics Contest for Grades IV - VIII, "Romanian Villages Olympiad", county stage</p>
               </div>
             </motion.div>
           </motion.div>
