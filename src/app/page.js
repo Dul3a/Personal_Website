@@ -4,6 +4,8 @@ import styles from "./page.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import Image from "next/image";
+import logoImage from "./logo_litera_D_2.png";
 
 
 export default function Home() {
@@ -50,10 +52,17 @@ export default function Home() {
         <motion.div 
           className={styles.logo}
           onClick={scrollToTop}
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '2px' }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
+          <Image 
+            src={logoImage}
+            alt="Logo"
+            width={40}
+            height={40}
+            style={{ objectFit: 'contain' }}
+          />
           Dulea Andrei
         </motion.div>
         <button 
