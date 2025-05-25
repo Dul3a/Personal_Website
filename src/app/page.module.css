@@ -27,6 +27,7 @@
   font-weight: 600;
   color: #111111;
   z-index: 1001;
+  border-bottom: 1px solid white;
 }
 
 .navLinks {
