@@ -172,7 +172,7 @@ export default function Home() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <h3>Project One</h3>
+              <h3>L2C++</h3>
               <p>Advanced components and templates to craft beautiful websites.</p>
             </motion.div>
             <motion.div 
