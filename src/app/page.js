@@ -223,15 +223,19 @@ export default function Home() {
         >
           <motion.h2 variants={itemVariants}>Projects</motion.h2>
           <motion.div className={styles.projectGrid} variants={containerVariants}>
-            <motion.div 
+            <motion.a 
+              href="https://www.onlinestudy.ro/vet/2024/Dulea-Andrei/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.projectCard}
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              style={{ textDecoration: 'none', color: 'inherit' }}
             >
               <h3>L2C++</h3>
-              <p>Advanced components and templates to craft beautiful websites.</p>
-            </motion.div>
+              <p>Educational platform dedicated to C++ learning, offering interactive and efficients ways of teaching</p>
+            </motion.a>
             <motion.div 
               className={styles.projectCard}
               variants={itemVariants}
@@ -239,7 +243,7 @@ export default function Home() {
               whileTap={{ scale: 0.98 }}
             >
               <h3>Project Two</h3>
-              <p>UI kit to make beautiful, animated interfaces.</p>
+              <p>To complete...</p>
             </motion.div>
           </motion.div>
         </motion.section>
