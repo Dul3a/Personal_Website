@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -37,7 +38,7 @@ export default function Home() {
       }
     }
   };
-
+  
   return (
     <div className={styles.page}>
       <motion.nav 
