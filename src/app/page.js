@@ -225,7 +225,7 @@ export default function Home() {
           <motion.h2 variants={itemVariants}>Projects</motion.h2>
           <motion.div className={styles.projectGrid} variants={containerVariants}>
             <motion.a 
-              href="https://www.onlinestudy.ro/vet/2024/Dulea-Andrei/index.html"
+              href="https://l2cpp.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.projectCard}
@@ -237,15 +237,18 @@ export default function Home() {
               <h3>L2C++</h3>
               <p>Educational platform dedicated to C++ learning, offering interactive and efficients ways of teaching</p>
             </motion.a>
-            <motion.div 
+            <motion.a
+              href="https://bonesight-ai.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer" 
               className={styles.projectCard}
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <h3>Project Two</h3>
-              <p>To complete...</p>
-            </motion.div>
+              <h3>BoneSight-AI</h3>
+              <p>A website which helps doctors detect bone fractures easier using Artificial Intelligence.</p>
+            </motion.a>
           </motion.div>
         </motion.section>
       </main>
