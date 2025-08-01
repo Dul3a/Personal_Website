@@ -150,11 +150,14 @@ export default function Home() {
             <motion.div className={styles.timelineItem} variants={itemVariants}>
               <div className={styles.timelineDate}>Present - 2025 (11ᵗʰ grade)</div>
               <div className={styles.timelineContent}>
+                <h3>Computer science</h3>
+                <p>🥉 Bronze medal at the national phase of the InfoEducatie Olympiad, Educational Software Section (<a href="https://l2cpp.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#007bff', textDecoration: 'underline' }}>L2C++ Project</a>)</p> <br></br>
+
                 <h3>Science</h3>
                 <p>🥇 First place at the PerformSTEM Competition</p> <br></br>
 
                 <h3>Computer science</h3>
-                <p>🏆 First place at the county phase of the InfoEducatie Olympiad, qualified to the national phase</p> <br></br>
+                <p>🏆 First place at the county phase of the InfoEducatie Olympiad, Educational Software Section, qualified to the national phase</p> <br></br>
 
                 <h3>Computer science</h3>
                 <p>🥇 Gold medal at the National Olympiad of Artificial Intelligence (ONIA), qualified for the Romanian National Training Camp (extended team)</p> <br></br>
